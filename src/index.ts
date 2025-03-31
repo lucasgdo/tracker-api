@@ -1,9 +1,11 @@
 import { AppDataSource } from "#data-source.js";
+import routes from "#routes.js";
 import express from "express";
 const app = express();
 const port = process.env.PORT ?? "9001";
 
 app.use(express.json());
+app.use(routes);
 
 AppDataSource.initialize()
   .then(() => {
