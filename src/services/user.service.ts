@@ -3,7 +3,10 @@ import { userRepository } from "#repositories/user.repository.js";
 
 class UserService {
     async findById(id: string) {
-        return await userRepository.findOneBy({ id });
+        return await userRepository.findOne({
+            where: { id },
+            relations: ["watchlists"],
+        });
     }
 
     async findByEmail(email: string) {

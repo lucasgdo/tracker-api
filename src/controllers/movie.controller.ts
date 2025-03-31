@@ -10,7 +10,7 @@ class MovieController {
 
     findById = async (req: Request, res: Response) => {
         const movieId = req.params.id;
-        const movie = await movieService.findbyId(movieId);
+        const movie = await movieService.findById(movieId);
         res.json(movie);
     };
 

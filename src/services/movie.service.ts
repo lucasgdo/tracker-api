@@ -6,7 +6,7 @@ class MovieService {
         return movieRepository.find();
     }
 
-    async findbyId(id: string) {
+    async findById(id: string) {
         return await movieRepository.findOneBy({ id });
     }
 

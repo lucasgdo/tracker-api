@@ -1,5 +1,12 @@
-import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import {
+    BeforeInsert,
+    Column,
+    Entity,
+    OneToMany,
+    PrimaryGeneratedColumn,
+} from "typeorm";
 import * as argon2 from "argon2";
+import { Watchlist } from "./watchlist.entity.js";
 
 @Entity("users")
 export class User {
@@ -14,6 +21,9 @@ export class User {
 
     @Column({ type: "varchar" })
     password!: string;
+
+    @OneToMany(() => Watchlist, (watchlist) => watchlist.user)
+    watchlists!: Watchlist[];
 
     @BeforeInsert()
     async hashPassword() {
