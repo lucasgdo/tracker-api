@@ -1,23 +1,23 @@
 import { User } from "#entities/user.entity.js";
-import { UserRepository } from "#repositories/user.repository.js";
+import { userRepository } from "#repositories/user.repository.js";
 
 class UserService {
-  async findById(id: string) {
-    return await UserRepository.findOneBy({ id });
-  }
+    async findById(id: string) {
+        return await userRepository.findOneBy({ id });
+    }
 
-  async findByEmail(email: string) {
-    return await UserRepository.findOneBy({ email });
-  }
+    async findByEmail(email: string) {
+        return await userRepository.findOneBy({ email });
+    }
 
-  async findByUsername(username: string) {
-    return await UserRepository.findOneBy({ username });
-  }
+    async findByUsername(username: string) {
+        return await userRepository.findOneBy({ username });
+    }
 
-  async save(user: Partial<User>) {
-    const createdUser = UserRepository.create(user);
-    return await UserRepository.save(createdUser);
-  }
+    async save(user: Partial<User>) {
+        const createdUser = userRepository.create(user);
+        return await userRepository.save(createdUser);
+    }
 }
 
 export default new UserService();

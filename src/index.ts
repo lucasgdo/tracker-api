@@ -8,11 +8,11 @@ app.use(express.json());
 app.use(routes);
 
 AppDataSource.initialize()
-  .then(() => {
-    app.listen(port, () => {
-      console.log(`Express server has started on port ${port}`);
+    .then(() => {
+        app.listen(port, () => {
+            console.log(`Express server has started on port ${port}`);
+        });
+    })
+    .catch((error: unknown) => {
+        console.log(error);
     });
-  })
-  .catch((error: unknown) => {
-    console.log(error);
-  });
