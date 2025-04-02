@@ -1,14 +1,15 @@
-import { loginDto } from "#dtos/loginDto.js";
-import { registerDto } from "#dtos/registerDto.js";
-import authService from "#services/auth.service.js";
+import { LoginDto } from "#dtos/login.dto.js";
+import { RegisterDto } from "#dtos/register.dto.js";
 import { Request, Response } from "express";
+import authService from "#services/auth.service.js";
+import userService from "#services/user.service.js";
 
 class AuthController {
     register = async (req: Request, res: Response) => {
-        const { username, email, password } = req.body as registerDto;
+        const { username, email, password } = req.body as RegisterDto;
 
         try {
-            const response = await authService.register({
+            const response = await userService.save({
                 username,
                 email,
                 password,
@@ -22,7 +23,7 @@ class AuthController {
     };
 
     login = async (req: Request, res: Response) => {
-        const { email, password } = req.body as loginDto;
+        const { email, password } = req.body as LoginDto;
 
         try {
             const response = await authService.login({ email, password });
