@@ -46,15 +46,15 @@ class MovieController {
 
         if (!title) {
             res.status(400).json({ message: "Title is required" });
-        }
-
-        try {
-            const movies = await movieService.searchByTitle(title, page);
-            res.json(movies);
-        } catch (error) {
-            res.status(400).json({
-                message: error instanceof Error ? error.message : "",
-            });
+        } else {
+            try {
+                const movies = await movieService.searchByTitle(title, page);
+                res.json(movies);
+            } catch (error) {
+                res.status(400).json({
+                    message: error instanceof Error ? error.message : "",
+                });
+            }
         }
     };
 
