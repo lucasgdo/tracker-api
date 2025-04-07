@@ -1,5 +1,5 @@
-import { RegisterDto } from "#dtos/register.dto.js";
-import { userRepository } from "#repositories/user.repository.js";
+import { RegisterDto } from "../dtos/register.dto.js";
+import { userRepository } from "../repositories/user.repository.js";
 
 class UserService {
     async findById(id: string) {

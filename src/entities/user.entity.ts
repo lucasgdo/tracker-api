@@ -4,6 +4,7 @@ import {
     Entity,
     OneToMany,
     PrimaryGeneratedColumn,
+    Relation,
 } from "typeorm";
 import * as argon2 from "argon2";
 import { Watchlist } from "./watchlist.entity.js";
@@ -23,7 +24,7 @@ export class User {
     password!: string;
 
     @OneToMany(() => Watchlist, (watchlist) => watchlist.user)
-    watchlists!: Watchlist[];
+    watchlists!: Relation<Watchlist>[];
 
     @BeforeInsert()
     async hashPassword() {

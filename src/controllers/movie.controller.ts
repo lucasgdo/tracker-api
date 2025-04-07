@@ -1,6 +1,6 @@
-import { CreateMovieDto } from "#dtos/createMovie.dto.js";
+import { CreateMovieDto } from "../dtos/createMovie.dto.js";
 import { Request, Response } from "express";
-import movieService from "#services/movie.service.js";
+import movieService from "../services/movie.service.js";
 
 class MovieController {
     findAll = async (req: Request, res: Response) => {

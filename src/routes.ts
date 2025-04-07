@@ -1,7 +1,7 @@
-import authRoutes from "#routes/auth.routes.js";
-import movieRoutes from "#routes/movie.routes.js";
-import userRoutes from "#routes/user.routes.js";
-import watchlistRoutes from "#routes/watchlist.routes.js";
+import authRoutes from "./routes/auth.routes.js";
+import movieRoutes from "./routes/movie.routes.js";
+import userRoutes from "./routes/user.routes.js";
+import watchlistRoutes from "./routes/watchlist.routes.js";
 import { Router } from "express";
 
 const routes = Router();

@@ -1,8 +1,8 @@
-import { LoginDto } from "#dtos/login.dto.js";
-import { RegisterDto } from "#dtos/register.dto.js";
+import { LoginDto } from "../dtos/login.dto.js";
+import { RegisterDto } from "../dtos/register.dto.js";
 import { Request, Response } from "express";
-import authService from "#services/auth.service.js";
-import userService from "#services/user.service.js";
+import authService from "../services/auth.service.js";
+import userService from "../services/user.service.js";
 
 class AuthController {
     register = async (req: Request, res: Response) => {

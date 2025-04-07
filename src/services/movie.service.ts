@@ -1,6 +1,6 @@
-import { CreateMovieDto } from "#dtos/createMovie.dto.js";
-import { TmdbResponse } from "#interfaces/tmdbResponse.interface.js";
-import { movieRepository } from "#repositories/movie.repository.js";
+import { CreateMovieDto } from "../dtos/createMovie.dto.js";
+import { TmdbResponse } from "../interfaces/tmdbResponse.interface.js";
+import { movieRepository } from "../repositories/movie.repository.js";
 
 const TMDB_API_URL = process.env.TMDB_API_URL ?? "";
 const TMDB_API_KEY = process.env.TMDB_API_KEY ?? "";

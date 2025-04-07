@@ -1,10 +1,10 @@
-import movieController from "#controllers/movie.controller.js";
-import { CreateMovieDto } from "#dtos/createMovie.dto.js";
-import { authMiddleware } from "#middlewares/auth.middleware.js";
+import movieController from "../controllers/movie.controller.js";
+import { CreateMovieDto } from "../dtos/createMovie.dto.js";
+import { authMiddleware } from "../middlewares/auth.middleware.js";
 import {
     validateDTO,
     validateUUID,
-} from "#middlewares/validation.middleware.js";
+} from "../middlewares/validation.middleware.js";
 import { Router } from "express";
 
 const movieRoutes = Router();

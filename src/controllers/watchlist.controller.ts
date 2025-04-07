@@ -1,6 +1,6 @@
-import { AddMovieToWatchlistDto } from "#dtos/addMovieToWatchlist.dto.js";
-import { CreateWatchlistDto } from "#dtos/createWatchlist.dto.js";
-import watchlistService from "#services/watchlist.service.js";
+import { AddMovieToWatchlistDto } from "../dtos/addMovieToWatchlist.dto.js";
+import { CreateWatchlistDto } from "../dtos/createWatchlist.dto.js";
+import watchlistService from "../services/watchlist.service.js";
 import { Request, Response } from "express";
 import { JwtPayload } from "jsonwebtoken";
 

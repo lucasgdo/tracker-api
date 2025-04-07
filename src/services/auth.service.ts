@@ -1,4 +1,4 @@
-import { LoginDto } from "#dtos/login.dto.js";
+import { LoginDto } from "../dtos/login.dto.js";
 import userService from "./user.service.js";
 import jwt from "jsonwebtoken";
 

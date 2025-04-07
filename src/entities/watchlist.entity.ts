@@ -5,6 +5,7 @@ import {
     ManyToMany,
     ManyToOne,
     PrimaryGeneratedColumn,
+    Relation,
 } from "typeorm";
 import { User } from "./user.entity.js";
 import { Movie } from "./movie.entity.js";
@@ -18,9 +19,9 @@ export class Watchlist {
     name!: string;
 
     @ManyToOne(() => User, (user) => user.watchlists)
-    user!: User;
+    user!: Relation<User>;
 
     @ManyToMany(() => Movie, (movie) => movie.watchlists)
     @JoinTable({ name: "watchlist_movie " })
-    movies!: Movie[];
+    movies!: Relation<Movie>[];
 }

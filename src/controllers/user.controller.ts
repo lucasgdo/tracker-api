@@ -1,6 +1,6 @@
 import { JwtPayload } from "jsonwebtoken";
 import { Request, Response } from "express";
-import userService from "#services/user.service.js";
+import userService from "../services/user.service.js";
 
 class UserController {
     findById = async (req: Request, res: Response) => {

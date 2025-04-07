@@ -1,4 +1,10 @@
-import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import {
+    Column,
+    Entity,
+    ManyToMany,
+    PrimaryGeneratedColumn,
+    Relation,
+} from "typeorm";
 import { Watchlist } from "./watchlist.entity.js";
 
 @Entity("movies")
@@ -13,5 +19,5 @@ export class Movie {
     tmdbId!: string;
 
     @ManyToMany(() => Watchlist, (watchlist) => watchlist.movies)
-    watchlists!: Watchlist[];
+    watchlists!: Relation<Watchlist>[];
 }

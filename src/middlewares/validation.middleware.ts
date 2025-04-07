@@ -1,4 +1,4 @@
-import { IdParamDto } from "#dtos/idParam.dto.js";
+import { IdParamDto } from "../dtos/idParam.dto.js";
 import { ClassConstructor, plainToInstance } from "class-transformer";
 import { validate } from "class-validator";
 import { NextFunction, Request, Response } from "express";

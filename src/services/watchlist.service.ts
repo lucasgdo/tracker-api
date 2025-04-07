@@ -1,6 +1,6 @@
-import { AddMovieToWatchlistDto } from "#dtos/addMovieToWatchlist.dto.js";
-import { CreateWatchlistDto } from "#dtos/createWatchlist.dto.js";
-import { watchlistRepository } from "#repositories/watchlist.repository.js";
+import { AddMovieToWatchlistDto } from "../dtos/addMovieToWatchlist.dto.js";
+import { CreateWatchlistDto } from "../dtos/createWatchlist.dto.js";
+import { watchlistRepository } from "../repositories/watchlist.repository.js";
 import movieService from "./movie.service.js";
 import userService from "./user.service.js";
 
